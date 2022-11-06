@@ -22,13 +22,13 @@ exports.AddComment = async (req, res) => {
       );
     }
     let updatedLead = await lead.update({
-        comment: comment,
+      comment: comment,
     });
     if (!updatedLead) {
       return response.responseHelper(
         res,
         false,
-        "Status not updated",
+        "Comment not added",
         "Unexpected Failure"
       );
     }

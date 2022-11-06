@@ -8,8 +8,8 @@ exports.LeadRegistration = async (req, res) => {
   let email = req.body.email;
   let phone = req.body.phone;
   let linkedIn = req.body.linkedIn;
-  let instructor_id = "29e4c215-5602-42c2-bb76-41215303e8de"; //res.body.instructor_id;
-  let course_id = "29e4c215-5602-42c2-bb76-41215303e8de";
+  let instructor_id = res.body.instructor_id;
+  let course_id = res.body.course_id;
   console.log(req.body);
   try {
     let lead = await Lead.create({

@@ -8,7 +8,7 @@ exports.UpdateCourse = async (req, res) => {
   let course_id = req.body.course_id;
   let name = req.body.name;
   let max_seats = req.body.max_seats;
-  let instructor_id = "29e4c215-5602-42c2-bb76-41215303e8de"; //res.body.instructor_id;
+  let instructor_id = res.body.instructor_id;
   let start_date = req.body.start_date;
   console.log(req.body);
   try {
