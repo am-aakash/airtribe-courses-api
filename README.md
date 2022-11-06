@@ -1,7 +1,17 @@
 # Airtribe Courses API
 
-| <img width="750" img src="database_design.png"> |
-| ---------------------------------------------- | 
+### Technologies Used :
+* Node.js
+* Express.js
+* PostrgeSQL
+* Sequelize
+* VS code
+* Postman
+* Git
+- - - -
+<img width="750" img src="database_design.png">
+
+- - - -
 
 ## POSTMAN RECORDS FOR THE APIs
 
