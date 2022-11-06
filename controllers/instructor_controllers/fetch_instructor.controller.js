@@ -1,5 +1,5 @@
 const db = require("../../models");
-const Instructor = db.instructor;
+const Instructor = db.instructors;
 const response = require("../../helpers/response.helper");
 
 exports.GetInstructors = async (req, res) => {

@@ -1,12 +1,12 @@
 const { v4: uuidv4 } = require("uuid");
 const db = require("../../models");
-const Instructor = db.instructor;
+const Instructor = db.instructors;
 const response = require("../../helpers/response.helper");
 
 exports.CreateInstructor = async (req, res) => {
-  let name = req.name;
-  let email = req.email;
-  let phone = req.phone;
+  let name = req.body.name;
+  let email = req.body.email;
+  let phone = req.body.phone;
   if (name == null || name === "") {
     return response.responseHelper(
       res,

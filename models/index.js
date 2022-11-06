@@ -17,7 +17,7 @@ const db = {};
 db.sequelize = sequelize;
 
 // Instructor table
-db.instructor = require("./instructor/instructor.model")(sequelize, Sequelize);
+db.instructors = require("./instructor/instructor.model")(sequelize, Sequelize);
 
 // Course table
 db.course = require("./course/course.model")(sequelize, Sequelize);
@@ -27,11 +27,11 @@ db.lead = require("./lead/lead.model")(sequelize, Sequelize);
 
 // Joins
 
-db.course.belongsTo(db.instructor, {
+db.course.belongsTo(db.instructors, {
   foreignKey: "instructor_id",
 });
 
-db.lead.belongsTo(db.instructor, {
+db.lead.belongsTo(db.instructors, {
   foreignKey: "instructor_id",
 });
 
