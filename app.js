@@ -9,7 +9,7 @@ app.use("/", (req, res) => {
 // db sequelize
 const db = require("./models/index");
 // db.sequelize.sync({
-//     force: true,
+//   force: true,
 // });
 
 const CONFIG = require("./config/config");

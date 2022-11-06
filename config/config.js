@@ -9,7 +9,7 @@ if (CONFIG.app === "production") {
   CONFIG.db_dialect = "postgres";
   CONFIG.db_host = "3.8.164.107";
   CONFIG.db_port = "5432";
-  CONFIG.db_name = "airtribe";
+  CONFIG.db_name = "airtribe_db";
   CONFIG.db_user = "postgres";
   CONFIG.db_password = "9334";
 }
