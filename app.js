@@ -11,6 +11,10 @@ app.use("/api/instructor", instructor_routes);
 const course_routes = require("./routes/course_routes/course.routes");
 app.use("/api/course", course_routes);
 
+//Lead Routes
+const lead_routes = require("./routes/lead_routes/lead.routes");
+app.use("/api/lead", lead_routes);
+
 // home route
 app.use("/", (req, res) => {
   res.send("Airtribe courses API working");
