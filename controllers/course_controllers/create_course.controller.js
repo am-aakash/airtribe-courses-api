@@ -1,28 +1,23 @@
 const { v4: uuidv4 } = require("uuid");
 const db = require("../../models");
 const Instructor = db.instructors;
+const Course = db.courses;
 const response = require("../../helpers/response.helper");
 
-exports.CreateInstructor = async (req, res) => {
+exports.CreateCourse = async (req, res) => {
   let name = req.body.name;
-  let email = req.body.email;
-  let phone = req.body.phone;
-  if (name == null || name === "") {
-    return response.responseHelper(
-      res,
-      false,
-      "Name can not be empty",
-      "Field required"
-    );
-  }
+  let max_seats = req.body.max_seats;
+  let instructor_id = res.body.instructor_id;
+  let start_date = req.body.start_date;
   console.log(req.body);
   try {
-    let instructor = await Instructor.create({
+    let course = await Course.create({
       name: name,
-      email: email,
-      phone: phone,
+      max_seats: max_seats,
+      instructor_id: instructor_id,
+      start_date: start_date,
     });
-    if (!instructor) {
+    if (!course) {
       return response.responseHelper(
         res,
         false,
@@ -34,9 +29,9 @@ exports.CreateInstructor = async (req, res) => {
       res,
       true,
       {
-        instructor: instructor,
+        course: course,
       },
-      "Successfully added instructor"
+      "Successfully added course"
     );
   } catch (error) {
     console.log(error);
