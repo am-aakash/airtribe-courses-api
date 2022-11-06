@@ -7,6 +7,10 @@ app.use(bodyParser.json());
 const instructor_routes = require("./routes/instructor_routes/instructor.routes");
 app.use("/api/instructor", instructor_routes);
 
+//Course Routes
+const course_routes = require("./routes/course_routes/course.routes");
+app.use("/api/course", course_routes);
+
 // home route
 app.use("/", (req, res) => {
   res.send("Airtribe courses API working");

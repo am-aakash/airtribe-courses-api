@@ -20,23 +20,22 @@ db.sequelize = sequelize;
 db.instructors = require("./instructor/instructor.model")(sequelize, Sequelize);
 
 // Course table
-db.course = require("./course/course.model")(sequelize, Sequelize);
+db.courses = require("./course/course.model")(sequelize, Sequelize);
 
 // Lead table
-db.lead = require("./lead/lead.model")(sequelize, Sequelize);
+db.leads = require("./lead/lead.model")(sequelize, Sequelize);
 
 // Joins
+// db.course.belongsTo(db.instructors, {
+//   foreignKey: "instructor_id",
+// });
 
-db.course.belongsTo(db.instructors, {
-  foreignKey: "instructor_id",
-});
+// db.lead.belongsTo(db.instructors, {
+//   foreignKey: "instructor_id",
+// });
 
-db.lead.belongsTo(db.instructors, {
-  foreignKey: "instructor_id",
-});
-
-db.lead.belongsTo(db.course, {
-  foreignKey: "course_id",
-});
+// db.lead.belongsTo(db.course, {
+//   foreignKey: "course_id",
+// });
 
 module.exports = db;
