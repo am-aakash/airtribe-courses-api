@@ -4,7 +4,7 @@ const Lead = db.leads;
 const response = require("../../helpers/response.helper");
 
 exports.SearchLead = async (req, res) => {
-  let keyword = req.body.keyword;
+  let keyword = req.params.keyword;
   const Op = Sequelize.Op;
   console.log(req.body);
   try {

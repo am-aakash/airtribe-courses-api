@@ -1,7 +1,7 @@
 const CONFIG = {}; // Make this global to use all over the application
 
 CONFIG.app = "development"; //production or development
-CONFIG.port = "3033";
+CONFIG.port = "3333";
 
 if (CONFIG.app === "production") {
   // TODO
