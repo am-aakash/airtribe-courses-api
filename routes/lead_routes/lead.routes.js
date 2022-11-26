@@ -11,10 +11,10 @@ router.post(
   lead_registration_controller.LeadRegistration
 );
 
-router.post("/update-status", update_status_controller.UpdateStatus);
+router.put("/update-status", update_status_controller.UpdateStatus);
 
-router.post("/search-lead", search_lead_controller.SearchLead);
+router.get("/search-lead", search_lead_controller.SearchLead);
 
-router.post("/add-comment", add_comment_controller.AddComment);
+router.put("/add-comment", add_comment_controller.AddComment);
 
 module.exports = router;

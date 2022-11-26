@@ -6,6 +6,6 @@ const update_course_controller = require("../../controllers/course_controllers/u
 
 router.post("/create-course", create_course_controller.CreateCourse);
 
-router.post("/update-course", update_course_controller.UpdateCourse);
+router.put("/update-course", update_course_controller.UpdateCourse);
 
 module.exports = router;

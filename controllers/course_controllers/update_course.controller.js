@@ -8,8 +8,8 @@ exports.UpdateCourse = async (req, res) => {
   let course_id = req.body.course_id;
   let name = req.body.name;
   let max_seats = req.body.max_seats;
-  let instructor_id = res.body.instructor_id;
-  let start_date = req.body.start_date;
+  let instructor_id = "9ea86cd7-95b4-4a62-94ed-d3f5c84c791d"; // res.body.instructor_id;
+  let start_date = new Date() + 4 * 24 * 30 * 1000; // req.body.start_date;
   console.log(req.body);
   try {
     let course = await Course.findOne({
